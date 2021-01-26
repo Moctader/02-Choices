@@ -113,10 +113,10 @@ function v07() {
     if (digit_a < digit_b) {
         document.getElementById("smallest").innerHTML = digit_a
 
-    } else if (digit_b < digit_a) {
+    } else if (digit_b < digit_c) {
         document.getElementById("smallest").innerHTML = digit_b
 
-    } else if (digit_c < digit_b) {
+    } else if (digit_c < digit_d) {
         document.getElementById("smallest").innerHTML = digit_c
 
     } else {
@@ -125,30 +125,40 @@ function v07() {
     }
 
 
-    if (digit_a > digit_b) {
-        document.getElementById("biggest").innerHTML = digit_a
-
-    } else if (digit_b > digit_a) {
-        document.getElementById("biggest").innerHTML = digit_b
-
-    } else if (digit_c > digit_b) {
-        document.getElementById("biggest").innerHTML = digit_c
-
-    } else {
-        document.getElementById("biggest").innerHTML = digit_d
-
+    let biggest = digit_a
+    if (digit_b > biggest){
+        biggest= digit_b
     }
 
+    if (digit_c > biggest){
+        biggest= digit_c
+    }
+
+    if (digit_d > biggest){
+        biggest= digit_d
+    }
+    document.getElementById("biggest").innerHTML = biggest;
 }
 
 function v08() {
+
+
     let yearx = Number(document.getElementById("yearx").value)
 
 
-    if (yearx % 4 == 0){
-        document.getElementById("leap_year").innerHTML = "leap year"
-    } else {
-        document.getElementById("leap_year").innerHTML = "not leap year"
+    if (yearx % 4 === 0){
+        if (yearx % 100 === 0){
+            if ( yearx % 400 ===0){
+                document.getElementById("leap_year").innerHTML ="is leap year";
+            }else{
+                document.getElementById("leap_year").innerHTML ="is not leap year";
+            }
+
+        }else {
+            document.getElementById("leap_year").innerHTML = "is leap year";
+        }
+    }else {
+        document.getElementById("leap_year").innerHTML = "is not leap year";
 
     }
 }
