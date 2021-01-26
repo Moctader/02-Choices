@@ -65,30 +65,108 @@ function v04() {
     const REC = "rectangle";
     const SQ = "square";
 
+    let side1 = Number(document.getElementById("side1").value)
+    let side2 = Number(document.getElementById("side2").value)
+
+    document.getElementById("square").innerHTML= REC
+
 }
 
 function v05() {
     const EVEN = "even";
     const ODD = "odd";
 
+    let number3 = Number(document.getElementById("number3").value)
+    if (number3 % 2 == 0){
+        document.getElementById("even").innerHTML = EVEN
+    } else {
+        document.getElementById("even").innerHTML = ODD
+
+    }
+
 }
 
 function v06() {
+    const ZERO = "zero";
+    const POSITIVE = "positive";
+    const NEGATIVE = "negative";
 
+
+    let number3 = Number(document.getElementById("number3").value)
+
+    if (number3 > 0){
+        document.getElementById("positive").innerHTML = POSITIVE
+    } else if (number3 < 0) {
+        document.getElementById("positive").innerHTML = NEGATIVE
+    } else {
+        document.getElementById("positive").innerHTML = ZERO
+
+    }
 }
 
 function v07() {
+    let digit_a = Number(document.getElementById("digit_a").value)
+    let digit_b = Number(document.getElementById("digit_b").value)
+    let digit_c = Number(document.getElementById("digit_c").value)
+    let digit_d = Number(document.getElementById("digit_d").value)
+
+    if (digit_a < digit_b) {
+        document.getElementById("smallest").innerHTML = digit_a
+
+    } else if (digit_b < digit_a) {
+        document.getElementById("smallest").innerHTML = digit_b
+
+    } else if (digit_c < digit_b) {
+        document.getElementById("smallest").innerHTML = digit_c
+
+    } else {
+        document.getElementById("smallest").innerHTML = digit_d
+
+    }
+
+
+    if (digit_a > digit_b) {
+        document.getElementById("biggest").innerHTML = digit_a
+
+    } else if (digit_b > digit_a) {
+        document.getElementById("biggest").innerHTML = digit_b
+
+    } else if (digit_c > digit_b) {
+        document.getElementById("biggest").innerHTML = digit_c
+
+    } else {
+        document.getElementById("biggest").innerHTML = digit_d
+
+    }
 
 }
 
 function v08() {
+    let yearx = Number(document.getElementById("yearx").value)
 
+
+    if (yearx % 4 == 0){
+        document.getElementById("leap_year").innerHTML = "leap year"
+    } else {
+        document.getElementById("leap_year").innerHTML = "not leap year"
+
+    }
 }
 
 function v09() {
 	const FLOWER1 = '<img alt="flower1" src="img/flower1.png">';
 	const FLOWER2 = '<img alt="flower2" src="img/flower2.png">';
 	const FLOWER3 = '<img alt="flower3" src="img/flower3.png">';
-	const FLOWER4 = '<img alt="flower4" src="img/flower4.png">';  
+    const FLOWER4 = '<img alt="flower4" src="img/flower4.png">';  
+    
+    let number4 = Number(document.getElementById("number4").value)
+
+    if ( number4 % 3 == 0){
+        document.getElementById("flower").innerHTML = FLOWER1
+    } else {
+        document.getElementById("flower").innerHTML = FLOWER2
+
+    }
+
 
 }
